@@ -1,0 +1,28 @@
+<template name="popupWindows_receive">
+    <div class="row popup-windows receive">
+      <form class="account-send-form">
+          <h1 class="main-head"><strong>Receive</strong> Daxxcoins</h1>
+        <!-- from/to -->
+        <div class="row clear from-to">
+
+           <div class="col-sm-12">
+               <h3>QR Code</h3>
+               <div>
+                 <img src="../images/qr.png"/>
+                 <div id="qrcode"></div>
+               </div>
+           </div>
+
+            <div class="col-sm-12">
+                <h3>Daxx-Wallet Address</h3>
+                <input readonly type="text" value="0x00ee851c25096a4a2500712af3c67e0d37b22b3e" class="form-control wallet-address-input"/>
+            </div>
+
+            <div class="col-sm-12">
+               <button style="color:#fff;margin-top:20px;" class="show-data dapp-block-button dapp-small copyAddress"> Copy Link</button>
+            </div>
+        </div>
+    </form>
+    </div>
+
+</template>
