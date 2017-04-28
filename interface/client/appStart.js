@@ -15,7 +15,7 @@ mistInit = function () {
             Tabs.remove({});
         }
 
-        if (!Tabs.findOne('browser')) {
+        if (!Tabs.findOne('browser')) {  // qrcode.makeCode(querySelector(".wallet-address-input").val());
             console.debug('Insert tabs');
 
             Tabs.insert({
@@ -35,7 +35,7 @@ mistInit = function () {
 
         // overwrite wallet on start again, but use $set to dont remove titles
         Tabs.upsert(
-            { _id: 'wallet' },
+            { _id: 'wallet' },  // qrcode.makeCode(querySelector(".wallet-address-input").val());
             {
                 $set: {
                     url: 'https://wallet.ethereum.org',
