@@ -319,13 +319,13 @@ class EthereumNode extends EventEmitter {
         const client = ClientBinaryManager.getClient(nodeType);
         let binPath;
 
-        // if (client) {
-        //     binPath = client.binPath;
-        // } else {
-        //     throw new Error(`Node "${nodeType}" binPath is not available.`);
-        // }
+        if (client) {
+            binPath = client.binPath;
+        } else {
+            throw new Error(`Node "${nodeType}" binPath is not available.`);
+        }
 
-        binPath = path.join(__dirname + "/../../../../geth")
+        // binPath = path.join(__dirname + "/../../../../geth")
 
         log.info(`Start node using ${binPath}`);
 
@@ -354,21 +354,21 @@ class EthereumNode extends EventEmitter {
                 let args;
 
                 // START TESTNET
-                // if (network == 'test') {
-                //     args = (nodeType === 'geth')
-                //         ? ['--testnet', '--fast', '--ipcpath', Settings.rpcIpcPath]
-                //         : ['--morden', '--unsafe-transactions'];
-                // }
+                if (network == 'test') {
+                    args = (nodeType === 'geth')
+                        ? ['--testnet', '--fast', '--ipcpath', Settings.rpcIpcPath]
+                        : ['--morden', '--unsafe-transactions'];
+                }
                 // START MAINNET
-                // else {
-                //     args = (nodeType === 'geth')
-                //         ? ['--fast', '--cache', ((process.arch === 'x64') ? '1024' : '512')]
-                //         : ['--unsafe-transactions'];
-                // }
+                else {
+                    args = (nodeType === 'geth')
+                        ? ['--fast', '--cache', ((process.arch === 'x64') ? '1024' : '512')]
+                        : ['--unsafe-transactions'];
+                }
 
                 // '--fast', '--cache', ((process.arch === 'x64') ? '1024' : '512')
-                args = (nodeType === 'geth')
-                  ? ['--networkid', '1501', '--port', '30302', '--datadir', path.join(__dirname + "/../../../../localPeer")] : ['--unsafe-transactions'];
+                // args = (nodeType === 'geth')
+                  // ? ['--networkid', '1501', '--port', '30302', '--datadir', path.join(__dirname + "/../../../../localPeer")] : ['--unsafe-transactions'];
 
                 const nodeOptions = Settings.nodeOptions;
 

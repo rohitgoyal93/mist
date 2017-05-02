@@ -343,9 +343,9 @@ onReady = () => {
                 throw new Error('Cant start client due to legacy non-Fork setting.');
             }
         })
-        // .then(() => {
-        //     return ClientBinaryManager.init();
-        // })
+        .then(() => {
+            return ClientBinaryManager.init();
+        })
         .then(() => {
             return ethereumNode.init();
         })

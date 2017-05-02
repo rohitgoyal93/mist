@@ -26,6 +26,9 @@
                 "send": "Send",
                 "receive": "Receive"
             },
+            "transaction": {
+                "label": "Transactions"
+            },
             "view": {
                 "label": "View",
                 "fullscreen": "Toggle Fullscreen",

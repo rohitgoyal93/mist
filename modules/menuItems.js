@@ -209,6 +209,7 @@ let menuTempl = function (webviews) {
     });
 
 
+
     // Transfer
     menu.push({
         label: i18n.t('mist.applicationMenu.transfer.label'),
@@ -239,6 +240,14 @@ let menuTempl = function (webviews) {
             },
         ],
     });
+
+
+    // Transaction
+    menu.push({
+        label: i18n.t('mist.applicationMenu.transaction.label'),
+
+    });
+
 
 
     // EDIT
