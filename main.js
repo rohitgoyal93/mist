@@ -153,15 +153,15 @@ let startMainWindow;
 // initialization and ready for creating browser windows.
 app.on('ready', () => {
     // if using HTTP RPC then inform user
-    if (Settings.rpcMode === 'http') {
-        dialog.showErrorBox('Insecure RPC connection', `
-WARNING: You are connecting to an Ethereum node via: ${Settings.rpcHttpPath}
-
-This is less secure than using local IPC - your passwords will be sent over the wire in plaintext.
-
-Only do this if you have secured your HTTP connection or you know what you are doing.
-`);
-    }
+//     if (Settings.rpcMode === 'http') {
+//         dialog.showErrorBox('Insecure RPC connection', `
+// WARNING: You are connecting to an Ethereum node via: ${Settings.rpcHttpPath}
+//
+// This is less secure than using local IPC - your passwords will be sent over the wire in plaintext.
+//
+// Only do this if you have secured your HTTP connection or you know what you are doing.
+// `);
+//     }
 
     // initialise the db
     global.db.init().then(onReady).catch((err) => {
