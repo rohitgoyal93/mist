@@ -130,6 +130,7 @@ let menuTempl = function (webviews) {
     // });
 
     // ACCOUNTS
+
     menu.push({
         label: i18n.t('mist.applicationMenu.accounts.label'),
         submenu: [
@@ -211,38 +212,39 @@ let menuTempl = function (webviews) {
 
 
     // Transfer
-    menu.push({
-        label: i18n.t('mist.applicationMenu.transfer.label'),
-        submenu: [
-            {
-                label: i18n.t('mist.applicationMenu.transfer.send'),
-                // accelerator: 'CommandOrControl+Z',
-                // role: 'undo',
-                click() {
-                    Windows.createPopup('send', {
-                        electronOptions: {
-                            width: 500, height: 600, alwaysOnTop: true,
-                        },
-                    });
-                },
-            },
-            {
-                label: i18n.t('mist.applicationMenu.transfer.receive'),
-                // accelerator: 'Shift+CommandOrControl+Z',
-                // role: 'redo',
-                click() {
-                    Windows.createPopup('receive', {
-                        electronOptions: {
-                            width: 500, height: 600, alwaysOnTop: true,
-                        },
-                    });
-                },
-            },
-        ],
-    });
+    // menu.push({
+    //     label: i18n.t('mist.applicationMenu.transfer.label'),
+    //     submenu: [
+    //         {
+    //             label: i18n.t('mist.applicationMenu.transfer.send'),
+    //             // accelerator: 'CommandOrControl+Z',
+    //             // role: 'undo',
+    //             click() {
+    //                 Windows.createPopup('send', {
+    //                     electronOptions: {
+    //                         width: 500, height: 600, alwaysOnTop: true,
+    //                     },
+    //                 });
+    //             },
+    //         },
+    //         {
+    //             label: i18n.t('mist.applicationMenu.transfer.receive'),
+    //             // accelerator: 'Shift+CommandOrControl+Z',
+    //             // role: 'redo',
+    //             click() {
+    //                 Windows.createPopup('receive', {
+    //                     electronOptions: {
+    //                         width: 500, height: 600, alwaysOnTop: true,
+    //                     },
+    //                 });
+    //             },
+    //         },
+    //     ],
+    // });
 
 
     // Transaction
+
     menu.push({
         label: i18n.t('mist.applicationMenu.transaction.label'),
         submenu: [
@@ -260,6 +262,7 @@ let menuTempl = function (webviews) {
             }
         ],
     });
+
 
 
 
