@@ -148,13 +148,13 @@ let menuTempl = function (webviews) {
                 label: i18n.t('mist.applicationMenu.accounts.import'),
                 // accelerator: 'CommandOrControl+I',
                 // enabled: ethereumNode.isMainNetwork,
-                // click() {
-                //     Windows.createPopup('importAccount', {
-                //         electronOptions: {
-                //             width: 600, height: 370, alwaysOnTop: true,
-                //         },
-                //     });
-                // },
+                click() {
+                    Windows.createPopup('import', {
+                        electronOptions: {
+                            width: 600, height: 370, alwaysOnTop: true,
+                        },
+                    });
+                },
             },
             // {
             //     type: 'separator',
@@ -245,7 +245,20 @@ let menuTempl = function (webviews) {
     // Transaction
     menu.push({
         label: i18n.t('mist.applicationMenu.transaction.label'),
-
+        submenu: [
+            {
+                label: i18n.t('mist.applicationMenu.transaction.txndetails'),
+                // accelerator: 'CommandOrControl+Z',
+                // role: 'undo',
+                click() {
+                    Windows.createPopup('txndetails', {
+                        electronOptions: {
+                            width: 1000, height: 800, alwaysOnTop: true,
+                        },
+                    });
+                },
+            }
+        ],
     });
 
 

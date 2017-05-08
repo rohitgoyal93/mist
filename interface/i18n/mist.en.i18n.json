@@ -27,7 +27,8 @@
                 "receive": "Receive"
             },
             "transaction": {
-                "label": "Transactions"
+                "label": "Transactions",
+                "txndetails":"Details"
             },
             "view": {
                 "label": "View",
