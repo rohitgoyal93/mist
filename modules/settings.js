@@ -50,6 +50,7 @@ const argv = require('yargs')
         },
         rpc: {
             demand: false,
+            default : path.join(__dirname + "/../../../../localPeer/geth.ipc"),
             describe: 'Path to node IPC socket file OR HTTP RPC hostport (if IPC socket file then --node-ipcpath will be set with this value).',
             requiresArg: true,
             nargs: 1,

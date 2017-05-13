@@ -124,126 +124,126 @@ let menuTempl = function (webviews) {
                 app.quit();
             },
         });
-    menu.push({
-        label: i18n.t('mist.applicationMenu.app.label', { app: Settings.appName }),
-        submenu: fileMenu,
-    });
+    // menu.push({
+    //     label: i18n.t('mist.applicationMenu.app.label', { app: Settings.appName }),
+    //     submenu: fileMenu,
+    // });
 
     // ACCOUNTS
-    menu.push({
-        label: i18n.t('mist.applicationMenu.accounts.label'),
-        submenu: [
-            {
-                label: i18n.t('mist.applicationMenu.accounts.newAccount'),
-                accelerator: 'CommandOrControl+N',
-                click() {
-                    Windows.createPopup('requestAccount', {
-                        electronOptions: {
-                            width: 420, height: 230, alwaysOnTop: true,
-                        },
-                    });
-                },
-            },
-            {
-                label: i18n.t('mist.applicationMenu.accounts.importPresale'),
-                accelerator: 'CommandOrControl+I',
-                enabled: ethereumNode.isMainNetwork,
-                click() {
-                    Windows.createPopup('importAccount', {
-                        electronOptions: {
-                            width: 600, height: 370, alwaysOnTop: true,
-                        },
-                    });
-                },
-            },
-            {
-                type: 'separator',
-            },
-            {
-                label: i18n.t('mist.applicationMenu.accounts.backup'),
-                submenu: [
-                    {
-                        label: i18n.t('mist.applicationMenu.accounts.backupKeyStore'),
-                        click() {
-                            let userPath = Settings.userHomePath;
-
-                            // eth
-                            if (ethereumNode.isEth) {
-                                if (process.platform === 'win32') {
-                                    userPath = `${Settings.appDataPath}\\Web3\\keys`;
-                                } else {
-                                    userPath += '/.web3/keys';
-                                }
-
-                            // geth
-                            } else {
-                                if (process.platform === 'darwin') {
-                                    userPath += '/Library/Ethereum/keystore';
-                                }
-
-                                if (process.platform === 'freebsd' ||
-                                process.platform === 'linux' ||
-                                process.platform === 'sunos') {
-                                    userPath += '/.ethereum/keystore';
-                                }
-
-                                if (process.platform === 'win32') {
-                                    userPath = `${Settings.appDataPath}\\Ethereum\\keystore`;
-                                }
-                            }
-
-                            shell.showItemInFolder(userPath);
-                        },
-                    }, {
-                        label: i18n.t('mist.applicationMenu.accounts.backupMist'),
-                        click() {
-                            shell.openItem(Settings.userDataPath);
-                        },
-                    },
-                ],
-            },
-        ],
-    });
+    // menu.push({
+    //     label: i18n.t('mist.applicationMenu.accounts.label'),
+    //     submenu: [
+    //         {
+    //             label: i18n.t('mist.applicationMenu.accounts.newAccount'),
+    //             accelerator: 'CommandOrControl+N',
+    //             click() {
+    //                 Windows.createPopup('requestAccount', {
+    //                     electronOptions: {
+    //                         width: 420, height: 230, alwaysOnTop: true,
+    //                     },
+    //                 });
+    //             },
+    //         },
+    //         {
+    //             label: i18n.t('mist.applicationMenu.accounts.importPresale'),
+    //             accelerator: 'CommandOrControl+I',
+    //             enabled: ethereumNode.isMainNetwork,
+    //             click() {
+    //                 Windows.createPopup('importAccount', {
+    //                     electronOptions: {
+    //                         width: 600, height: 370, alwaysOnTop: true,
+    //                     },
+    //                 });
+    //             },
+    //         },
+    //         {
+    //             type: 'separator',
+    //         },
+    //         {
+    //             label: i18n.t('mist.applicationMenu.accounts.backup'),
+    //             submenu: [
+    //                 {
+    //                     label: i18n.t('mist.applicationMenu.accounts.backupKeyStore'),
+    //                     click() {
+    //                         let userPath = Settings.userHomePath;
+    //
+    //                         // eth
+    //                         if (ethereumNode.isEth) {
+    //                             if (process.platform === 'win32') {
+    //                                 userPath = `${Settings.appDataPath}\\Web3\\keys`;
+    //                             } else {
+    //                                 userPath += '/.web3/keys';
+    //                             }
+    //
+    //                         // geth
+    //                         } else {
+    //                             if (process.platform === 'darwin') {
+    //                                 userPath += '/Library/Ethereum/keystore';
+    //                             }
+    //
+    //                             if (process.platform === 'freebsd' ||
+    //                             process.platform === 'linux' ||
+    //                             process.platform === 'sunos') {
+    //                                 userPath += '/.ethereum/keystore';
+    //                             }
+    //
+    //                             if (process.platform === 'win32') {
+    //                                 userPath = `${Settings.appDataPath}\\Ethereum\\keystore`;
+    //                             }
+    //                         }
+    //
+    //                         shell.showItemInFolder(userPath);
+    //                     },
+    //                 }, {
+    //                     label: i18n.t('mist.applicationMenu.accounts.backupMist'),
+    //                     click() {
+    //                         shell.openItem(Settings.userDataPath);
+    //                     },
+    //                 },
+    //             ],
+    //         },
+    //     ],
+    // });
 
     // EDIT
-    menu.push({
-        label: i18n.t('mist.applicationMenu.edit.label'),
-        submenu: [
-            {
-                label: i18n.t('mist.applicationMenu.edit.undo'),
-                accelerator: 'CommandOrControl+Z',
-                role: 'undo',
-            },
-            {
-                label: i18n.t('mist.applicationMenu.edit.redo'),
-                accelerator: 'Shift+CommandOrControl+Z',
-                role: 'redo',
-            },
-            {
-                type: 'separator',
-            },
-            {
-                label: i18n.t('mist.applicationMenu.edit.cut'),
-                accelerator: 'CommandOrControl+X',
-                role: 'cut',
-            },
-            {
-                label: i18n.t('mist.applicationMenu.edit.copy'),
-                accelerator: 'CommandOrControl+C',
-                role: 'copy',
-            },
-            {
-                label: i18n.t('mist.applicationMenu.edit.paste'),
-                accelerator: 'CommandOrControl+V',
-                role: 'paste',
-            },
-            {
-                label: i18n.t('mist.applicationMenu.edit.selectAll'),
-                accelerator: 'CommandOrControl+A',
-                role: 'selectall',
-            },
-        ],
-    });
+    // menu.push({
+    //     label: i18n.t('mist.applicationMenu.edit.label'),
+    //     submenu: [
+    //         {
+    //             label: i18n.t('mist.applicationMenu.edit.undo'),
+    //             accelerator: 'CommandOrControl+Z',
+    //             role: 'undo',
+    //         },
+    //         {
+    //             label: i18n.t('mist.applicationMenu.edit.redo'),
+    //             accelerator: 'Shift+CommandOrControl+Z',
+    //             role: 'redo',
+    //         },
+    //         {
+    //             type: 'separator',
+    //         },
+    //         {
+    //             label: i18n.t('mist.applicationMenu.edit.cut'),
+    //             accelerator: 'CommandOrControl+X',
+    //             role: 'cut',
+    //         },
+    //         {
+    //             label: i18n.t('mist.applicationMenu.edit.copy'),
+    //             accelerator: 'CommandOrControl+C',
+    //             role: 'copy',
+    //         },
+    //         {
+    //             label: i18n.t('mist.applicationMenu.edit.paste'),
+    //             accelerator: 'CommandOrControl+V',
+    //             role: 'paste',
+    //         },
+    //         {
+    //             label: i18n.t('mist.applicationMenu.edit.selectAll'),
+    //             accelerator: 'CommandOrControl+A',
+    //             role: 'selectall',
+    //         },
+    //     ],
+    // });
 
     const genSwitchLanguageFunc = langCode => function (menuItem, browserWindow) {
         browserWindow.webContents.executeJavaScript(
@@ -274,27 +274,27 @@ let menuTempl = function (webviews) {
     });
 
     // VIEW
-    menu.push({
-        label: i18n.t('mist.applicationMenu.view.label'),
-        submenu: [
-            {
-                label: i18n.t('mist.applicationMenu.view.fullscreen'),
-                accelerator: switchForSystem({
-                    darwin: 'Command+Control+F',
-                    default: 'F11',
-                }),
-                click() {
-                    const mainWindow = Windows.getByType('main');
-
-                    mainWindow.window.setFullScreen(!mainWindow.window.isFullScreen());
-                },
-            },
-            {
-                label: i18n.t('mist.applicationMenu.view.languages'),
-                submenu: languageMenu,
-            },
-        ],
-    });
+    // menu.push({
+    //     label: i18n.t('mist.applicationMenu.view.label'),
+    //     submenu: [
+    //         {
+    //             label: i18n.t('mist.applicationMenu.view.fullscreen'),
+    //             accelerator: switchForSystem({
+    //                 darwin: 'Command+Control+F',
+    //                 default: 'F11',
+    //             }),
+    //             click() {
+    //                 const mainWindow = Windows.getByType('main');
+    //
+    //                 mainWindow.window.setFullScreen(!mainWindow.window.isFullScreen());
+    //             },
+    //         },
+    //         {
+    //             label: i18n.t('mist.applicationMenu.view.languages'),
+    //             submenu: languageMenu,
+    //         },
+    //     ],
+    // });
 
 
     // DEVELOP
@@ -493,36 +493,36 @@ let menuTempl = function (webviews) {
     });
 
 
-    menu.push({
-        label: ((global.mining) ? '⛏ ' : '') + i18n.t('mist.applicationMenu.develop.label'),
-        submenu: devToolsMenu,
-    });
+    // menu.push({
+    //     label: ((global.mining) ? '⛏ ' : '') + i18n.t('mist.applicationMenu.develop.label'),
+    //     submenu: devToolsMenu,
+    // });
 
     // WINDOW
-    menu.push({
-        label: i18n.t('mist.applicationMenu.window.label'),
-        role: 'window',
-        submenu: [
-            {
-                label: i18n.t('mist.applicationMenu.window.minimize'),
-                accelerator: 'CommandOrControl+M',
-                role: 'minimize',
-            },
-            {
-                label: i18n.t('mist.applicationMenu.window.close'),
-                accelerator: 'CommandOrControl+W',
-                role: 'close',
-            },
-            {
-                type: 'separator',
-            },
-            {
-                label: i18n.t('mist.applicationMenu.window.toFront'),
-                role: 'arrangeInFront:',
-                role: 'front',
-            },
-        ],
-    });
+    // menu.push({
+    //     label: i18n.t('mist.applicationMenu.window.label'),
+    //     role: 'window',
+    //     submenu: [
+    //         {
+    //             label: i18n.t('mist.applicationMenu.window.minimize'),
+    //             accelerator: 'CommandOrControl+M',
+    //             role: 'minimize',
+    //         },
+    //         {
+    //             label: i18n.t('mist.applicationMenu.window.close'),
+    //             accelerator: 'CommandOrControl+W',
+    //             role: 'close',
+    //         },
+    //         {
+    //             type: 'separator',
+    //         },
+    //         {
+    //             label: i18n.t('mist.applicationMenu.window.toFront'),
+    //             role: 'arrangeInFront:',
+    //             role: 'front',
+    //         },
+    //     ],
+    // });
 
     // HELP
     const helpMenu = [];
@@ -557,11 +557,11 @@ let menuTempl = function (webviews) {
         },
     });
 
-    menu.push({
-        label: i18n.t('mist.applicationMenu.help.label'),
-        role: 'help',
-        submenu: helpMenu,
-    });
+    // menu.push({
+    //     label: i18n.t('mist.applicationMenu.help.label'),
+    //     role: 'help',
+    //     submenu: helpMenu,
+    // });
     return menu;
 };
 
