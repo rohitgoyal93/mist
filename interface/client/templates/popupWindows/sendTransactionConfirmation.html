@@ -1,12 +1,13 @@
 <template name="popupWindows_sendTransactionConfirmation">
-    <div class="popup-windows tx-info">
+    <div class="popup-windows tx-info" style="background:#fff;">
         <form action="#">
             {{#with $.Session.get "data"}}
                 {{#if $and data (TemplateVar.get "toIsContract")}}
                     <h1>{{i18n "mist.popupWindows.sendTransactionConfirmation.title.contractExecution"}}</h1>
                 {{else}}
                     {{#if to}}
-                        <h1>{{i18n "mist.popupWindows.sendTransactionConfirmation.title.sendTransaction"}}</h1>
+                        <!-- <h1>{{i18n "mist.popupWindows.sendTransactionConfirmation.title.sendTransaction"}}</h1> -->
+                        <h1 style="font-size:16px;border-bottom:1px solid #f5f5f5;color:#222;padding:8px 15px;font-weight:400;margin:0 0 20px 0;">Confirm Transaction</h1>
                     {{else}}
                         <h1>{{i18n "mist.popupWindows.sendTransactionConfirmation.title.createContract"}}</h1>
                     {{/if}}
@@ -14,48 +15,49 @@
 
                 <div class="container">
                 <div class="inner-container">
-                    <div class="transaction-parties">
-                    <div>
-                        {{#if TemplateVar.get "fromIsContract"}}
+                    <!-- <div class="transaction-parties">
+                    <div> -->
+                        <!-- {{#if TemplateVar.get "fromIsContract"}}
                             <i class="overlap-icon icon-doc"></i>
                         {{else}}
                             <i class="overlap-icon icon-key"></i>
                         {{/if}}
                         {{> dapp_identicon identity=from class="dapp-large"}}
-                        <br>
-                        <span class="simptip-position-bottom simptip-movable" data-tooltip="{{from}}">{{shortenAddress from}}</span>
-                    </div>
-                    <div class="connection">
-                        <div class="amount">
-                            {{{totalAmount}}} <span class="unit">ETHER</span>
-                        </div>
-                        {{#if TemplateVar.get "executionFunction" }}
+                        <br> -->
+                        <!-- <span style="color:#222" class="simptip-position-bottom simptip-movable" data-tooltip="{{from}}">{{shortenAddress from}}</span> -->
+
+                    <!-- </div>
+                    <div class="connection"> -->
+                        <!-- <div class="amount" style="font-size:16px;padding-top:10px;">
+                            {{{totalAmount}}} <span class="unit">DaxxCoin</span>
+                        </div> -->
+                        <!-- {{#if TemplateVar.get "executionFunction" }}
                             <div class='function-signature {{#if TemplateVar.get "hasSignature"}} has-signature {{/if}} '>
                                     {{TemplateVar.get "executionFunction"}}
                             </div>
-                        {{/if}}
-                    </div>
+                        {{/if}} -->
+                    <!-- </div>
 
-                    <div>
-                        {{#if to}}
+                    <div> -->
+                        <!-- {{#if to}}
                             {{#if TemplateVar.get "toIsContract"}}
                                 <i class="overlap-icon icon-doc"></i>
                             {{else}}
                                 <i class="overlap-icon icon-key"></i>
                             {{/if}}
                             {{> dapp_identicon identity=to class="dapp-large"}}
-                            <br>
-                            <a href="http://etherscan.io/address/{{to}}#code" class="simptip-position-bottom simptip-movable" data-tooltip="{{to}}" target="_blank">{{shortenAddress to}}</a>
+
+                            <a style="color:#222;margin-top:5px;" href="http://etherscan.io/address/{{to}}#code" class="simptip-position-bottom simptip-movable" data-tooltip="{{to}}" target="_blank">{{shortenAddress to}}</a>
                         {{else}}
                             <i class="circle-icon icon-doc"></i>
                             <br>
                             <span>{{i18n "mist.popupWindows.sendTransactionConfirmation.createContract"}}</span>
-                        {{/if}}
-                    </div>
-                </div>
+                        {{/if}} -->
+                    <!-- </div> -->
+                <!-- </div> -->
 
                 {{#if transactionInvalid}}
-                    <p class="info dapp-error"> 
+                    <p class="info dapp-error">
                     {{i18n "mist.popupWindows.sendTransactionConfirmation.estimatedGasError"}}
                     </p>
                 {{else}}
@@ -87,13 +89,16 @@
                 {{/if}}
 
                 <div class="fees">
-                    <ul>
+                    <ul style="margin-top:-40px;">
                         <li>
-                            <div class="value">
-                            {{i18n "mist.popupWindows.sendTransactionConfirmation.estimatedFee"}}
+                            <div class="value"   style="font-weight:400;color:#222;">
+                            <!-- {{i18n "mist.popupWindows.sendTransactionConfirmation.estimatedFee"}} -->
+                            From
                             </div>
                             <div class="type">
-                                {{#if $eq (TemplateVar.get "estimatedGas") "invalid"}}
+                              : {{from}}
+
+                                <!-- {{#if $eq (TemplateVar.get "estimatedGas") "invalid"}}
                                     <span class="red"><i class="icon-shield"></i> {{i18n "mist.popupWindows.sendTransactionConfirmation.transactionThrow"}}</span>
                                 {{else}}
 
@@ -102,25 +107,26 @@
                                     {{else}}
                                         {{estimatedFee}} ({{dapp_formatNumber (TemplateVar.get "estimatedGas") "0,0"}} gas)
                                     {{/if}}
-
-
-
-                                {{/if}}
+                                {{/if}} -->
                             </div>
                         </li>
                         <li>
-                            <div class="value">
-                                {{i18n "mist.popupWindows.sendTransactionConfirmation.gasLimit"}}
+                            <div class="value"   style="font-weight:400;color:#222;">
+                                <!-- {{i18n "mist.popupWindows.sendTransactionConfirmation.gasLimit"}} --> To
                             </div>
                             <div class="type">
-                                {{providedGas}} ether (<span class="provided-gas" contenteditable="true">{{dapp_formatNumber (TemplateVar.get 'initialProvidedGas') '0'}}</span> gas)
+                               : {{to}}
+                                <!-- {{providedGas}} ether (<span class="provided-gas" contenteditable="true">{{dapp_formatNumber (TemplateVar.get 'initialProvidedGas') '0'}}</span> gas) -->
                             </div>
                         </li>
                         <li>
-                            <div class="value">
-                                {{i18n "mist.popupWindows.sendTransactionConfirmation.gasPrice"}}
+                            <div class="value"  style="font-weight:400;color:#222;"> Amount
+
+                                <!-- {{i18n "mist.popupWindows.sendTransactionConfirmation.gasPrice"}} -->
                             </div>
-                            <div class="type">{{dapp_formatBalance gasPrice "0,0.0[0000]" "szabo"}} {{i18n "mist.popupWindows.sendTransactionConfirmation.perMillionGas"}}</div>
+                            <div class="type">: {{{totalAmount}}}
+                              <!-- {{dapp_formatBalance gasPrice "0,0.0[0000]" "szabo"}} {{i18n "mist.popupWindows.sendTransactionConfirmation.perMillionGas"}} -->
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -162,15 +168,22 @@
                 </div>
                 <footer>
                 {{#if TemplateVar.get "unlocking"}}
-                    <h2>{{i18n "mist.popupWindows.sendTransactionConfirmation.unlocking"}}</h2>
+                    <!-- <h2>{{i18n "mist.popupWindows.sendTransactionConfirmation.unlocking"}}</h2> -->
                 {{else}}
 
-                    <input type="password" placeholder="{{i18n 'mist.popupWindows.sendTransactionConfirmation.enterPassword'}}">
+                <div>
+                    <div style="font-weight:400;color:#222;padding:5px 0;">{{i18n 'mist.popupWindows.sendTransactionConfirmation.enterPassword'}}</div>
+                </div>
 
-                    <div class="dapp-modal-buttons">
-                        <button class="cancel" type="button">{{i18n "buttons.cancel"}}</button>
-                        <button class="ok dapp-primary-button" type="submit">{{i18n "mist.popupWindows.sendTransactionConfirmation.buttons.sendTransaction"}}</button>
+                  <div class="dapp-address-input">
+                    <input style="border:1px solid #ccc;background:#fff;color:#132342;font-size:14px;padding:8px 10px;text-align:center" type="password" placeholder="Transaction Password">
+                  </div>
+
+                    <div align="center">
+                        <button  style="background:#ddd;color:#222;font-size:14px;border-radius:2px;padding:8px 12px;margin:20px 5px;display:inline-block;" type="button">{{i18n "buttons.cancel"}}</button>
+                        <button style="background:#132342;color:#fff;font-size:14px;border-radius:2px;padding:8px 12px;margin:20px 5px;display:inline-block;" type="submit">{{i18n "mist.popupWindows.sendTransactionConfirmation.buttons.sendTransaction"}}</button>
                     </div>
+
 
                 {{/if}}
                 </footer>
