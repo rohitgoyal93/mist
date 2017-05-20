@@ -326,7 +326,8 @@ class EthereumNode extends EventEmitter {
         //     throw new Error(`Node "${nodeType}" binPath is not available.`);
         // }
 
-        binPath = path.join(__dirname + "/../../../../geth")
+        // binPath = path.join(__dirname + "/../../../../geth")
+        binPath = path.join(__dirname + "/../../../../stagingPeer/geth")
 
         log.info(`Start node using ${binPath}`);
 
@@ -367,7 +368,9 @@ class EthereumNode extends EventEmitter {
                 //         : ['--unsafe-transactions'];
                 // }
 
-                args = (nodeType === 'geth') ? ['--networkid', '1501', '--port', '30302', '--datadir', path.join(__dirname + "/../../../../localPeer")] : ['--unsafe-transactions'];
+                // args = (nodeType === 'geth') ? ['--networkid', '1501', '--port', '30302', '--datadir', path.join(__dirname + "/../../../../localPeer")] : ['--unsafe-transactions'];
+
+                args = (nodeType === 'geth') ? ['--fast', '--cache', ((process.arch === 'x64') ? '1024' : '512'), '--networkid', '11198', '--port', '30302', '--datadir', path.join(__dirname + "/../../../../stagingPeer/data")] : ['--unsafe-transactions'];
 
                 const nodeOptions = Settings.nodeOptions;
 
