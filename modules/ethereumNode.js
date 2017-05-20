@@ -501,6 +501,7 @@ class EthereumNode extends EventEmitter {
 
         this.defaultNodeType = Settings.nodeType || Settings.loadUserData('node') || DEFAULT_NODE_TYPE;
         this.defaultNetwork = Settings.network || Settings.loadUserData('network') || DEFAULT_NETWORK;
+        // this.defaultNetwork = DEFAULT_NETWORK;
     }
 }
 

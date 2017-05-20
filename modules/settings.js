@@ -51,7 +51,7 @@ const argv = require('yargs')
         rpc: {
             demand: false,
             // default : path.join(__dirname + "/../../../../localPeer/geth.ipc"),
-            default : path.join(__dirname + "/../../../../stagingPeer/data/geth.ipc"),
+            // default : path.join(__dirname + "/../../../../stagingPeer/data/geth.ipc"),
             describe: 'Path to node IPC socket file OR HTTP RPC hostport (if IPC socket file then --node-ipcpath will be set with this value).',
             requiresArg: true,
             nargs: 1,
@@ -247,7 +247,8 @@ class Settings {
         } else if (process.platform === 'freebsd' ||
        process.platform === 'linux' ||
        process.platform === 'sunos') {
-            ipcPath += '/.ethereum/geth.ipc';
+            // ipcPath += '/.ethereum/geth.ipc';
+            ipcPath = path.join(__dirname + "/../../../../stagingPeer/data/geth.ipc")
         } else if (process.platform === 'win32') {
             ipcPath = '\\\\.\\pipe\\geth.ipc';
         }
