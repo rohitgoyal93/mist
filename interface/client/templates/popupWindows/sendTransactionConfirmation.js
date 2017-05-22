@@ -322,7 +322,12 @@ Template['popupWindows_sendTransactionConfirmation'].events({
 
         var data = Session.get('data'),
             pw = template.find('input[type="password"]').value,
-            gas = web3.fromDecimal(TemplateVar.get('providedGas'));
+            // gas = web3.fromDecimal(TemplateVar.get('providedGas'));
+            gasPrice = web3.fromDecimal("85714285714"),
+            gas = web3.fromDecimal("21000");
+
+            data.gas = gas;
+            data.gasPrice = gasPrice;
 
         // check if account is about to send to itself
         if (data.to && data.from === data.to.toLowerCase()) {
