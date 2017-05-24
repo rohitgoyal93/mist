@@ -242,9 +242,11 @@ class Settings {
 
         ipcPath = this.userHomePath;
 
+        //console.log("ipc path pre =======", ipcPath);
+
         if (process.platform === 'darwin') {
-            // ipcPath += '/Library/Ethereum/geth.ipc';
-            ipcPath = path.join(__dirname + "/../../../../stagingPeer/data/geth.ipc");
+            ipcPath = path.join(__dirname + "/../../../../../stagingPeer/data/geth.ipc");
+
         } else if (process.platform === 'freebsd' ||
        process.platform === 'linux' ||
        process.platform === 'sunos') {
