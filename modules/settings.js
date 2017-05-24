@@ -244,12 +244,12 @@ class Settings {
 
         if (process.platform === 'darwin') {
             // ipcPath += '/Library/Ethereum/geth.ipc';
-            ipcPath = path.join(__dirname + "/../../../../stagingPeer/data/geth.ipc");
+            ipcPath = path.join(__dirname + "/../../../../../DaxxcoinPeer/data/geth.ipc");
         } else if (process.platform === 'freebsd' ||
        process.platform === 'linux' ||
        process.platform === 'sunos') {
             // ipcPath += '/.ethereum/geth.ipc';
-            ipcPath = path.join(__dirname + "/../../../../stagingPeer/data/geth.ipc");
+            ipcPath = path.join(__dirname + "/../../../../DaxxcoinPeer/data/geth.ipc");
         } else if (process.platform === 'win32') {
             ipcPath = '\\\\.\\pipe\\geth.ipc';
         }
