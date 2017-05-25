@@ -206,44 +206,46 @@ let menuTempl = function (webviews) {
     // });
 
     // EDIT
-    // menu.push({
-    //     label: i18n.t('mist.applicationMenu.edit.label'),
-    //     submenu: [
-    //         {
-    //             label: i18n.t('mist.applicationMenu.edit.undo'),
-    //             accelerator: 'CommandOrControl+Z',
-    //             role: 'undo',
-    //         },
-    //         {
-    //             label: i18n.t('mist.applicationMenu.edit.redo'),
-    //             accelerator: 'Shift+CommandOrControl+Z',
-    //             role: 'redo',
-    //         },
-    //         {
-    //             type: 'separator',
-    //         },
-    //         {
-    //             label: i18n.t('mist.applicationMenu.edit.cut'),
-    //             accelerator: 'CommandOrControl+X',
-    //             role: 'cut',
-    //         },
-    //         {
-    //             label: i18n.t('mist.applicationMenu.edit.copy'),
-    //             accelerator: 'CommandOrControl+C',
-    //             role: 'copy',
-    //         },
-    //         {
-    //             label: i18n.t('mist.applicationMenu.edit.paste'),
-    //             accelerator: 'CommandOrControl+V',
-    //             role: 'paste',
-    //         },
-    //         {
-    //             label: i18n.t('mist.applicationMenu.edit.selectAll'),
-    //             accelerator: 'CommandOrControl+A',
-    //             role: 'selectall',
-    //         },
-    //     ],
-    // });
+    if (process.platform === 'darwin'){
+    menu.push({
+        label: i18n.t('mist.applicationMenu.edit.label'),
+        submenu: [
+            {
+                label: i18n.t('mist.applicationMenu.edit.undo'),
+                accelerator: 'CommandOrControl+Z',
+                role: 'undo',
+            },
+            {
+                label: i18n.t('mist.applicationMenu.edit.redo'),
+                accelerator: 'Shift+CommandOrControl+Z',
+                role: 'redo',
+            },
+            {
+                type: 'separator',
+            },
+            {
+                label: i18n.t('mist.applicationMenu.edit.cut'),
+                accelerator: 'CommandOrControl+X',
+                role: 'cut',
+            },
+            {
+                label: i18n.t('mist.applicationMenu.edit.copy'),
+                accelerator: 'CommandOrControl+C',
+                role: 'copy',
+            },
+            {
+                label: i18n.t('mist.applicationMenu.edit.paste'),
+                accelerator: 'CommandOrControl+V',
+                role: 'paste',
+            },
+            {
+                label: i18n.t('mist.applicationMenu.edit.selectAll'),
+                accelerator: 'CommandOrControl+A',
+                role: 'selectall',
+            },
+        ],
+    });
+  }
 
     const genSwitchLanguageFunc = langCode => function (menuItem, browserWindow) {
         browserWindow.webContents.executeJavaScript(
