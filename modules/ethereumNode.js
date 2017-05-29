@@ -371,11 +371,15 @@ class EthereumNode extends EventEmitter {
 
                 // args = (nodeType === 'geth') ? ['--networkid', '1501', '--port', '30302', '--datadir', path.join(__dirname + "/../../../../localPeer")] : ['--unsafe-transactions'];
 
+                //STAGING NETWORK ID
+                // let networkId = '11198';
+
+                //PROD NETWORK ID
+                let networkId = '11199';
 
                 let datadir = process.platform === 'darwin' ? path.join(__dirname + "/../../../../../DaxxcoinPeer/data") : path.join(__dirname + "/../../../../DaxxcoinPeer/data");
 
-                args = (nodeType === 'geth') ? ['--fast', '--cache', ((process.arch === 'x64') ? '1024' : '512'), '--networkid', '11198', '--port', '30302', '--datadir', datadir] : ['--unsafe-transactions'];
-
+                args = (nodeType === 'geth') ? ['--fast', '--cache', ((process.arch === 'x64') ? '1024' : '512'), '--networkid', networkId, '--port', '30302', '--datadir', datadir] : ['--unsafe-transactions'];
 
                 const nodeOptions = Settings.nodeOptions;
 
