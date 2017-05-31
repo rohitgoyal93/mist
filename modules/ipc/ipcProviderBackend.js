@@ -21,7 +21,7 @@ const Windows = require('../windows');
 
 const ERRORS = {
     INVALID_PAYLOAD: { code: -32600, message: 'Payload, or some of its content properties are invalid. Please check if they are valid HEX with 0x prefix.' },
-    METHOD_DENIED: { code: -32601, message: "Method \'__method__\' not allowed." },
+    METHOD_DENIED: { code: -32601, message: "Transaction not confirmed." },
     METHOD_TIMEOUT: { code: -32603, message: "Request timed out for method  \'__method__\'." },
     TX_DENIED: { code: -32603, message: 'Transaction denied' },
     BATCH_TX_DENIED: { code: -32603, message: 'Transactions denied, sendTransaction is not allowed in batch requests.' },
