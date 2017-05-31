@@ -169,6 +169,10 @@
                     "contractExecution": "컨트랙트 실행",
                     "createContract": "컨트랙트 만들기"
                 },
+                "From":"에서",
+                "To":"에",
+                "Amount":"양",
+                "TransactionPassword":"거래 비밀번호",
                 "contractExecutionInfo": "컨트랙트 상의 함수를 실행시키려고 합니다. 가치 전송이 일어날 수도 있습니다.",
                 "contractCreationInfo": "주어진 데이터를 가지고 컨트랙트을 만들려고 합니다.",
                 "enterPassword": "트랜잭션을 확인하기 위해 암호를 입력하세요",

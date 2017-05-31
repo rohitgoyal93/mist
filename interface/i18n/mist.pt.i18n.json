@@ -169,6 +169,10 @@
                     "contractExecution": "Executar ordem",
                     "createContract": "Criar contrato"
                 },
+                "From":"A partir de",
+                "To":"Para",
+                "Amount":"Montante",
+                "TransactionPassword":"Senha de transação",
                 "contractExecutionInfo": "Você irá executar uma ordem em um contrato. Isso pode envolver transferência de valores.",
                 "contractCreationInfo": "Você irá criar um contrato",
                 "enterPassword": "Digite a senha para confirmar",

@@ -169,6 +169,10 @@
                     "contractExecution": "Vertrag ausführen",
                     "createContract": "Vertrag anlegen"
                 },
+                "From":"Von",
+                "To":"Nach",
+                "Amount":"Menge",
+                "TransactionPassword":"Transaktions-Passwort",
                 "contractExecutionInfo": "Sie sind dabei, eine Vertragsfunktion auszuführen. Das kann zur Übertragung eines Geldwertes führen.",
                 "contractCreationInfo": "Sie sind dabei, auf Basis der eingegebenen Daten einen Vertrag anzulegen.",
                 "enterPassword": "Bitte geben Sie das Passwort ein, um die Transaktion durchzuführen.",

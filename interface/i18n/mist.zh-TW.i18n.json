@@ -169,6 +169,10 @@
                     "contractExecution": "執行合約",
                     "createContract": "創建合約"
                 },
+                "From": "从",
+                "To": "至",
+                "Amount": "量",
+                "TransactionPassword": "交易密码",
                 "contractExecutionInfo": "您即將執行該合約上的一個函數，這可能需要會轉走您輸入的數量。",
                 "contractCreationInfo": "您即將用提供的資料創建一個合約。",
                 "enterPassword": "輸入密碼以確認該交易",

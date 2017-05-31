@@ -169,6 +169,10 @@
                     "contractExecution": "执行合约",
                     "createContract": "创建合约"
                 },
+                "From": "从",
+                "To": "至",
+                "Amount": "量",
+                "TransactionPassword": "交易密码",
                 "contractExecutionInfo": "你即将执行该合约上的一个函数，这可能需要会转走你输入的数量。",
                 "contractCreationInfo": "你即将用提供的数据创建一个合约。",
                 "enterPassword": "输入密码以确认该交易",

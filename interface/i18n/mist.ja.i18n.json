@@ -169,6 +169,10 @@
                     "contractExecution": "コントラクト実効する",
                     "createContract": "コントラクトを作成する"
                 },
+                "From":"から",
+                "To":"に",
+                "Amount":"量",
+                "TransactionPassword":"Transaction Password",
                 "contractExecutionInfo": "コントラクトの関数を実行しようとしています。これはバリューの移転を含むことがあります。",
                 "contractCreationInfo": "与えられたデータからコントラクトを作成しようとしています。",
                 "enterPassword": "トランザクションを実行するためにパスワードを入力して下さい。",
