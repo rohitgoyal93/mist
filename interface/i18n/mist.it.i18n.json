@@ -173,6 +173,7 @@
                 "To":"To",
                 "Amount":"Quantità",
                 "TransactionPassword":"Password di transazione",
+                "CreateWallet":"Crea portafoglio",
                 "contractExecutionInfo": "Stai per eseguire una funzione su di un contratto. Questo potrebbe comportare trasferimento di valuta.",
                 "contractCreationInfo": "Stai per creare un contratto con i dati forniti.",
                 "enterPassword": "Inserisci la password per confermare la transazione",

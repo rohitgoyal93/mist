@@ -173,6 +173,7 @@
                 "To": "Te",
                 "Amount": "Sasia",
                 "TransactionPassword": "Fjalëkalimi i Transaksionit",
+                "CreateWallet":"Krijo portofolin",
                 "contractExecutionInfo": "Ju jeni pranë ekzekutimit të një funksioni në një kontratë. Kjo mund të përfshijë transferim vlerash.",
                 "contractCreationInfo": "Ju jeni pranë krijimit të një kontrate nga të dhënat e siguruara.",
                 "enterPassword": "Fusni fjalëkalimin që të konfirmoni transaksionin",

@@ -203,6 +203,7 @@
                 "To":"Tot",
                 "Amount":"Bedrag",
                 "TransactionPassword":"Transactie Wachtwoord",
+                "CreateWallet":"Maak Wallet aan",
                 "contractExecutionInfo": "Je staat op het punt een functie uit te voeren op een contract. Dit kan overdrachten van waarde tot gevolg hebben.",
                 "contractCreationInfo": "Je staat op het punt een contract aan te maken met de gegeven gevevens.",
                 "enterPassword": "Voer wachtwoord in om de transactie te bevestigen",

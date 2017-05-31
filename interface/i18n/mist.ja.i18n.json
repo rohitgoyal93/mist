@@ -173,6 +173,7 @@
                 "To":"に",
                 "Amount":"量",
                 "TransactionPassword":"Transaction Password",
+                "CreateWallet":"ウォレットを作成",
                 "contractExecutionInfo": "コントラクトの関数を実行しようとしています。これはバリューの移転を含むことがあります。",
                 "contractCreationInfo": "与えられたデータからコントラクトを作成しようとしています。",
                 "enterPassword": "トランザクションを実行するためにパスワードを入力して下さい。",

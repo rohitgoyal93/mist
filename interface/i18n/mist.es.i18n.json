@@ -173,6 +173,7 @@
                 "To":"A",
                 "Amount":"Cantidad",
                 "TransactionPassword":"Clave de transacción",
+                "CreateWallet":"Crear Cartera",
                 "contractExecutionInfo": "Estás a punto de ejecutar una función en un contrato. Esto puede implicar la transferencia de valor.",
                 "contractCreationInfo": "Vas a crear un contrato a partir de los datos proporcionados.",
                 "enterPassword": "Introduzca la contraseña para confirmar la transacción",

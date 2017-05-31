@@ -173,6 +173,7 @@
                 "To":"Para",
                 "Amount":"Montante",
                 "TransactionPassword":"Senha de transação",
+                "CreateWallet":"Utwórz portfel",
                 "contractExecutionInfo": "Você irá executar uma ordem em um contrato. Isso pode envolver transferência de valores.",
                 "contractCreationInfo": "Você irá criar um contrato",
                 "enterPassword": "Digite a senha para confirmar",

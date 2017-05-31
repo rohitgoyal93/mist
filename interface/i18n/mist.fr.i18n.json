@@ -173,6 +173,7 @@
                 "To":"À",
                 "Amount":"Montant",
                 "TransactionPassword":"Mot de passe de transaction",
+                "CreateWallet":"Créer un portefeuille",
                 "contractExecutionInfo": "Vous êtes sur le point d'exécuter une fonction sur un contrat. Cela peut impliquer un transfert de valeur.",
                 "contractCreationInfo": "Vous êtes sur le point de créer un contrat à partir des données fournies.",
                 "enterPassword": "Entrez votre mot de passe pour confirmer la transaction",

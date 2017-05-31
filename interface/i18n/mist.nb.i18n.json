@@ -173,6 +173,7 @@
                 "To":"Til",
                 "Amount":"Beløp",
                 "TransactionPassword":"Transaksjonspassord",
+                "CreateWallet":"Opprett Wallet",
                 "contractExecutionInfo": "Du er i ferd med å utføre en funksjon på en kontrakt. Dette kan innebære overføring av verdier.",
                 "contractCreationInfo": "Du er i ferd med å lage en kontrakt fra de oppgitte data.",
                 "enterPassword": "Skriv inn passord for å bekrefte transaksjonen",
