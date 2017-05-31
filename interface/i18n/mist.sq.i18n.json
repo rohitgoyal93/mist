@@ -192,7 +192,7 @@
                     "connectionTimeout": "Nuk mund të lidhet me nyjen. Mos ka probleme diku?",
                     "wrongPassword": "Fjalëkalim i gabuar",
                     "multipleKeysMatchAddress": "Multiple keys match address, please remove duplicates from keystore (menu -> accounts -> backup -> accounts)",
-                    "insufficientFundsForGas": "Insufficient funds in main account (etherbase) to pay for gas",
+                    "insufficientFundsForGas": "Insufficient funds in main account to pay for gas",
                     "sameAccount": "Can't send to itself"
                 },
                 "transactionThrow": "The contract won't allow this transaction to be executed",
@@ -226,7 +226,7 @@
                 "loadItDescription": "If you already own Bitcoin, or any other cryptocurrency, you can easily convert it to ether using shapeshift. <br><br> We recommend loading somewhere between <strong>0.25 to 1 ether</strong>.",
                 "mineItDescription": "<strong>On the testnet you can mine ether yourself by going to the <em>Develop</em> menu and choosing <em>Start Mining</em>. </strong> <br> <strong> DO NOT ATTEMPT TO SEND REAL ETHER TO THIS ADDRESS </strong>",
                 "you": "YOU",
-                "etherbase": "Main account (etherbase)",
+                "etherbase": "Portofoli primar",
                 "depositBitcoin": "Deposit Bitcoin",
                 "learnIt": "Learn while you wait",
                 "downloadingBlocks": "Downloading blocks",

@@ -191,7 +191,7 @@
                     "connectionTimeout": "Eine Verbindung mit dem Softwareknoten war nicht möglich, eventuell ist der Softwareknoten im Hintergrund abgestürzt?",
                     "wrongPassword": "Falsches Passwort",
                     "multipleKeysMatchAddress": "Multiple keys match address, please remove duplicates from keystore (menu -> accounts -> backup -> accounts)",
-                    "insufficientFundsForGas": "Insufficient funds in main account (etherbase) to pay for gas",
+                    "insufficientFundsForGas": "Insufficient funds in main account to pay for gas",
                     "sameAccount": "Kann nicht zum gleichen Konto schicken."
                 },
                 "transactionThrow": "Der Vertrag wird diese Transaktion nicht ausführen können",
@@ -224,7 +224,7 @@
                 "loadItDescription": "Wenn Sie bereits über Bitcoin oder eine andere Kryptowährung verfügen, können Sie diese mit Shapeshift einfach in Ether umtauschen. <br><br> Wir empfehlen, ca. <strong>0.25 bis 1 ether</strong> einzutauschen.",
                 "mineItDescription": "<strong>Auf dem Testnetz können Sie selbst Ether minen. Bitte gehen Sie dazu in den Menüpunkt <em>Entwicklung</em> menu und wählen Sie <em>Mining starten</em>. </strong> <br> <strong> VERSUCHEN SIE NICHT, ECHTE ETHER AN DIESE ADRESSE ZU SENDEN! </strong>",
                 "you": "SIE",
-                "etherbase": "Hauptkonto (etherbase)",
+                "etherbase": "Primärbörse",
                 "depositBitcoin": "Bitcoin eintauschen",
                 "learnIt": "Lernen Sie DaxxCoin kennen, während Sie warten",
                 "downloadingBlocks": "Blöcke werden heruntergeladen",

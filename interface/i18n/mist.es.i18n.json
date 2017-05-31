@@ -192,7 +192,7 @@
                     "connectionTimeout": "No se pudo conectar al nodo, ha dejado de funcionar en segundo plano?",
                     "wrongPassword": "Contraseña incorrecta",
                     "multipleKeysMatchAddress": "Multiple keys match address, please remove duplicates from keystore (menu -> accounts -> backup -> accounts)",
-                    "insufficientFundsForGas": "Insufficient funds in main account (etherbase) to pay for gas",
+                    "insufficientFundsForGas": "Insufficient funds in main account to pay for gas",
                     "sameAccount": "Can't send to itself"
                 },
                 "transactionThrow": "The contract won't allow this transaction to be executed",
@@ -226,7 +226,7 @@
                 "loadItDescription": "Si ya dispone de Bitcoin o cualquier otra criptomoneda, puede convertirlas fácilmente a ether utilizando shapeshift. <br><br> Recomendamos una cuantía de entre <strong>0.25 a 1 ether</strong>.",
                 "mineItDescription": "<strong>En la red de pruebas puedes minar ether tú mismo desde el menú <em>Desarrollar</em> y eligiendo <em>Empezar a minar</em>. </strong> <br> <strong> NO INTENTE ENVIAR ETHER REALES A ESTA DIRECCIÓN </strong>",
                 "you": "TÚ",
-                "etherbase": "Cuenta principal (etherbase)",
+                "etherbase": "Cartera principal",
                 "depositBitcoin": "Depositar Bitcoin",
                 "learnIt": "Aprenda mientras espera",
                 "downloadingBlocks": "Descargando bloques",

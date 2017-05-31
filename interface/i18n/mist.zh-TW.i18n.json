@@ -192,7 +192,7 @@
                     "connectionTimeout": "無法連接該節點，後台節點是否崩潰了？",
                     "wrongPassword": "密碼錯誤",
                     "multipleKeysMatchAddress": "Multiple keys match address, please remove duplicates from keystore (menu -> accounts -> backup -> accounts)",
-                    "insufficientFundsForGas": "Insufficient funds in main account (etherbase) to pay for gas",
+                    "insufficientFundsForGas": "Insufficient funds in main account to pay for gas",
                     "sameAccount": "Can't send to itself"
                 },
                 "transactionThrow": "The contract won't allow this transaction to be executed",
@@ -226,7 +226,7 @@
                 "loadItDescription": "如果您已經擁有比特幣或者任何其他加密貨幣，您可以使用shapeshift來方便地轉換爲以太幣。<br><br>我們推薦您存入<strong>0.25到1以太幣</strong>.",
                 "mineItDescription": "<strong>如果您在testnet測試網路中，您可以自己挖掘一些以太幣，點擊<em>開發</em>選單並選擇<em>開啓挖礦</em>。</strong> <br> <strong>請勿將真正的以太幣發往該地址！</strong>",
                 "you": "您本人",
-                "etherbase": "主帳號（etherbase）",
+                "etherbase": "主要电子钱包",
                 "depositBitcoin": "存入比特幣",
                 "learnIt": "在等待期間學習一下",
                 "downloadingBlocks": "正在下載區塊",

@@ -192,7 +192,7 @@
                     "connectionTimeout": "La connexion au nœud n'a pas pu s'établir, est-ce un plantage dans l'arrière-plan ?",
                     "wrongPassword": "Mauvais mot de passe",
                     "multipleKeysMatchAddress": "Multiple keys match address, please remove duplicates from keystore (menu -> accounts -> backup -> accounts)",
-                    "insufficientFundsForGas": "Insufficient funds in main account (etherbase) to pay for gas",
+                    "insufficientFundsForGas": "Insufficient funds in main account to pay for gas",
                     "sameAccount": "Can't send to itself"
                 },
                 "transactionThrow": "The contract won't allow this transaction to be executed",
@@ -226,7 +226,7 @@
                 "loadItDescription": "Si vous possédez déjà des Bitcoin, ou n'importe quel autre crypto-monnaie, vous pouvez facilement les convertir en ether en utilisant shapeshift. <br><br> Nous recommandons d'en charger de <strong>0.25 à 1 ether</strong>.",
                 "mineItDescription": "<strong>Sur le réseau Testnet vous pouvez miner de l'ether vous-même en allant sur le menu <em>Développement</em> et en choisissant <em>Commencer à miner</em>. </strong> <br> <strong> N'ESSAYEZ PAS D'ENVOYER DU VERITABLE ETHER A CETTE ADRESSE </strong>",
                 "you": "VOUS",
-                "etherbase": "Compte principal (etherbase)",
+                "etherbase": "Portefeuille primaire",
                 "depositBitcoin": "Déposer des Bitcoin",
                 "learnIt": "Apprenez pendant que vous patientez",
                 "downloadingBlocks": "Téléchargement de blocs",

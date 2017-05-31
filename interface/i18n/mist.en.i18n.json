@@ -235,7 +235,7 @@
                     "connectionTimeout": "Couldn't connect to the node, did it crash in the background?",
                     "wrongPassword": "Wrong password",
                     "multipleKeysMatchAddress": "Multiple keys match address.  Please remove duplicates from keystore (menu -> accounts -> backup -> accounts)",
-                    "insufficientFundsForGas": "Insufficient funds in main account (etherbase) to pay for gas",
+                    "insufficientFundsForGas": "Insufficient funds in account to pay for gas",
                     "sameAccount": "Can't send to itself"
                 },
                 "showRawBytecode": "show raw data",
@@ -264,7 +264,7 @@
                 "loadItDescription" : "If you already own Bitcoin, or any other cryptocurrency, you can easily convert it to ether using Shapeshift. <br><br> We recommend loading somewhere between <strong>0.25 to 1 ether</strong>.",
                 "mineItDescription": "<strong>On the testnet you can mine Ether yourself by going to the <em>Develop</em> menu and choosing <em>Start Mining</em>. </strong> <br> <strong> DO NOT ATTEMPT TO SEND REAL ETHER TO THIS ADDRESS </strong>",
                 "you" : "YOU",
-                "etherbase" : "Main account (etherbase)",
+                "etherbase" : "Primary Wallet",
                 "depositBitcoin" : "Deposit using Bitcoin",
                 "viaShapeshift" : "Instant conversion via <a href='https://shapeshift.io/' target='_blank'>Shapeshift</a>",
                 "learnIt" : "Learn while you wait",

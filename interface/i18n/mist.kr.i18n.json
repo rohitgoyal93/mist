@@ -192,7 +192,7 @@
                     "connectionTimeout": "노드에 연결할 수 없었습니다. 백그라운드에서 작동중지되었습니까?",
                     "wrongPassword": "암호 불일치",
                     "multipleKeysMatchAddress": "Multiple keys match address, please remove duplicates from keystore (menu -> accounts -> backup -> accounts)",
-                    "insufficientFundsForGas": "Insufficient funds in main account (etherbase) to pay for gas",
+                    "insufficientFundsForGas": "Insufficient funds in main account to pay for gas",
                     "sameAccount": "Can't send to itself"
                 },
                 "transactionThrow": "The contract won't allow this transaction to be executed",
@@ -226,7 +226,7 @@
                 "loadItDescription": "만일 비트코인이나 다른 암호화 화폐를 가지고 있다면, shapeshift를 이용해 손쉽게 이더로 바꿀 수 있습니다. <br><br> 약 <strong>0.25 to 1 ether</strong> 이더 정도를 바꿀 것을 추천합니다.",
                 "mineItDescription": "<strong>테스트넷상에서는 <em>개발</em> 메뉴에 있는 <em>채굴 시작</em>을 선택함으로써 이더를 채굴할 수 있습니다. </strong> <br> <strong>이 주소로 진짜 이더를 절대 보내지 마세요.</strong>",
                 "you": "당신",
-                "etherbase": "주 계정(이더베이스)",
+                "etherbase": "기본 월렛",
                 "depositBitcoin": "비트코인 송금",
                 "learnIt": "기다리는 동안 학습하기",
                 "downloadingBlocks": "블럭 다운로드 중",

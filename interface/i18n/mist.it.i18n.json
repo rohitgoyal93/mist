@@ -192,7 +192,7 @@
                     "connectionTimeout": "Impossibile connettersi al nodo, é forse terminato in modo inaspettato ?",
                     "wrongPassword": "Password errata",
                     "multipleKeysMatchAddress": "Multiple keys match address, please remove duplicates from keystore (menu -> accounts -> backup -> accounts)",
-                    "insufficientFundsForGas": "Insufficient funds in main account (etherbase) to pay for gas",
+                    "insufficientFundsForGas": "Insufficient funds in main account to pay for gas",
                     "sameAccount": "Can't send to itself"
                 },
                 "transactionThrow": "The contract won't allow this transaction to be executed",
@@ -226,7 +226,7 @@
                 "loadItDescription": "Se possiedi giá Bitcoin, o qualunque altra cryptovaluta, puoi facilmente convertirla in eth usando shapeshift. <br><br> Raccomandiamo di depositare da <strong>0.25 a 1 ether</strong>.",
                 "mineItDescription": "<strong>Sulla rete di test (testnet) puoi minare ether in autonomia utilizzando il menu' <em>Sviluppo</em> e selezionando <em>Inizia Mining</em>. </strong> <br> <strong> NON TENTARE DI INVIARE ETHER REALE A QUESTO INDIRIZZO</strong>",
                 "you": "TU",
-                "etherbase": "Account principale (etherbase)",
+                "etherbase": "Portafoglio primario",
                 "depositBitcoin": "Deposita Bitcoin",
                 "learnIt": "Impara mentre aspetti",
                 "downloadingBlocks": "Scaricamento blocchi ",

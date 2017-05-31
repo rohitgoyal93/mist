@@ -194,7 +194,7 @@
                     "connectionTimeout": "Не удается подключиться к ноде, возможно завершилось фоновое приложение?",
                     "wrongPassword": "Неверный пароль",
                     "multipleKeysMatchAddress": "У нескольких ключей совпадает адрес, удалите дубликаты из хранилища ключей (Меню -> Аккаунты -> Резервное копирование -> Аккаунтов)",
-                    "insufficientFundsForGas": "Недостаточно средств на основном счете (ETHERBASE) чтобы заплатить за газ",
+                    "insufficientFundsForGas": "Недостаточно средств на основном счете чтобы заплатить за газ",
                     "sameAccount": "Can't send to itself"
                 },
                 "transactionThrow": "The contract won't allow this transaction to be executed",
@@ -227,7 +227,7 @@
                 "loadItDescription": "Если у вас уже есть Bitcoin, или любая другая криптовалюта, вы можете легко преобразовать её в эфир (Ether) с помощью Shapeshift. <br><br> Мы рекомендуем загрузить где-то <strong>от 0.25 до 1 эфира</strong>.",
                 "mineItDescription": "<strong>В тестовой сети вы можете добыть (намайнить) эфир сами, перейдя в меню <em>Дополнительно</em> и выбрав <em>Запустить майнинг</em>. </strong> <br> <strong> НЕ ПЫТАЙТЕСЬ ОТПРАВИТЬ РЕАЛЬНЫЙ ЭФИР НА ЭТОТ АДРЕС</strong>",
                 "you": "ВЫ",
-                "etherbase": "Основной аккаунт (etherbase)",
+                "etherbase": "Первичный кошелек",
                 "depositBitcoin": "Внести депозит через Bitcoin",
                 "viaShapeshift": "Мгновенное приобразование с помощью <a href='https://shapeshift.io/' target='_blank'>Shapeshift</a>",
                 "learnIt": "Изучайте, пока ожидаете",
