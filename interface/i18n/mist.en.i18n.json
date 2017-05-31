@@ -207,6 +207,11 @@
                     "contractExecution": "Execute contract",
                     "createContract": "Create contract"
                 },
+                "From":"From",
+                "To":"To",
+                "Amount":"Amount",
+                "TransactionPassword":"Transaction Password",
+
                 "contractExecutionInfo": "You are about to execute a function on a contract. This might involve transfer of value.",
                 "contractCreationInfo": "You are about to create a contract from the provided data.",
                 "enterPassword": "Enter password to confirm the transaction",
