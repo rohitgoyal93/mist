@@ -328,7 +328,7 @@ class EthereumNode extends EventEmitter {
 
         // binPath = path.join(__dirname + "/../../../../geth")
 
-        binPath = process.platform === 'darwin' ? path.join(__dirname + "/../../../../../DaxxcoinPeer/geth") : path.join(__dirname + "/../../../../DaxxcoinPeer/geth");
+        binPath = process.platform === 'darwin' ? path.join(__dirname + "/../../../../DaxxcoinPeer/geth") : path.join(__dirname + "/../../../DaxxcoinPeer/geth");
 
         log.info(`Start node using ${binPath}`);
 
@@ -372,14 +372,15 @@ class EthereumNode extends EventEmitter {
                 // args = (nodeType === 'geth') ? ['--networkid', '1501', '--port', '30302', '--datadir', path.join(__dirname + "/../../../../localPeer")] : ['--unsafe-transactions'];
 
                 //STAGING NETWORK ID
-                // let networkId = '11198';
+                let networkId = '11198';
 
                 //PROD NETWORK ID
-                let networkId = '11199';
+                // let networkId = '11199';
 
-                let datadir = process.platform === 'darwin' ? path.join(__dirname + "/../../../../../DaxxcoinPeer/data") : path.join(__dirname + "/../../../../DaxxcoinPeer/data");
+                let datadir = process.platform === 'darwin' ? path.join(__dirname + "/../../../../DaxxcoinPeer/data") : path.join(__dirname + "/../../../DaxxcoinPeer/data");
 
-                args = (nodeType === 'geth') ? ['--fast', '--cache', ((process.arch === 'x64') ? '1024' : '512'), '--networkid', networkId, '--port', '30302', '--datadir', datadir] : ['--unsafe-transactions'];
+                // '--fast', '--cache', ((process.arch === 'x64') ? '1024' : '512'),
+                args = (nodeType === 'geth') ? ['--networkid', networkId, '--port', '30332', '--datadir', datadir] : ['--unsafe-transactions'];
 
                 const nodeOptions = Settings.nodeOptions;
 
