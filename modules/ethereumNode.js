@@ -114,6 +114,7 @@ class EthereumNode extends EventEmitter {
         return this._lastErr = err;
     }
 
+
     /**
      * This method should always be called first to initialise the connection.
      * @return {Promise}
@@ -140,6 +141,7 @@ class EthereumNode extends EventEmitter {
                     });
             });
     }
+
 
 
     restart(newType, newNetwork) {
@@ -311,38 +313,78 @@ class EthereumNode extends EventEmitter {
     /**
      * @return {Promise}
      */
+
+     //var homepath = Settings.getuserHomePath();
     __startNode(nodeType, network) {
-        this.state = STATES.STARTING;
-
-        this._network = network;
-        this._type = nodeType;
-
-        const client = ClientBinaryManager.getClient(nodeType);
-        let binPath;
-
-        // if (client) {
-        //     binPath = client.binPath;
-        // } else {
-        //     throw new Error(`Node "${nodeType}" binPath is not available.`);
-        // }
-
-        // binPath = path.join(__dirname + "/../../../../geth")
-
-        binPath = process.platform === 'darwin' ? path.join(__dirname + "/../../../../DaxxcoinPeer/geth") : path.join(__dirname + "/../../../DaxxcoinPeer/geth");
-
-        log.info(`Start node using ${binPath}`);
-
         return new Q((resolve, reject) => {
-            this.__startProcess(nodeType, network, binPath)
-                .then(resolve, reject);
-        });
+      this.state = STATES.STARTING;
+      this._network = network;
+      this._type = nodeType;
+      var temp = this;
+      const client = ClientBinaryManager.getClient(nodeType);
+      let binPath;
+       var rootFolderPath = Settings.userSystemPath()+'/DaxxcoinPeer-Staging';   //Staging-build
+      //  var rootFolderPath = Settings.userSystemPath()+'/DaxxcoinPeer-Production';   //Staging-build
+
+        var copyFolderPath ="wallet_staging";
+        // var copyFolderPath = "wallet_production";
+
+        var buildPath = copyFolderPath+"/DaxxcoinPeer-Mac";
+        // var buildPath = copyFolderPath+"/DaxxcoinPeer-Linux";
+        // var buildPath = copyFolderPath+"/DaxxcoinPeer-Win";       //change the get to geth.exe also during permission
+
+
+
+       var dataFolderPath = rootFolderPath+"/data";
+       var gethFolderPath = dataFolderPath+"/geth";
+       var chainDataFolderPath = gethFolderPath+"/chaindata";
+       var keystoreFolderPath = dataFolderPath+"/keystore";
+                var fs = require("fs");
+               if (!fs.existsSync(rootFolderPath)){
+                 log.info("Directory not exist:::::::::::::::::::: creating at ",rootFolderPath);
+                 fs.mkdirSync(rootFolderPath);
+                 fs.chmodSync(rootFolderPath, 511);
+                 fs.mkdirSync(dataFolderPath);
+                 fs.chmodSync(dataFolderPath, 511);
+                 fs.mkdirSync(gethFolderPath);
+                 fs.chmodSync(gethFolderPath, 511);
+                 fs.mkdirSync(chainDataFolderPath);
+                 fs.chmodSync(chainDataFolderPath, 511);
+                 fs.mkdirSync(keystoreFolderPath);
+                 fs.chmodSync(keystoreFolderPath, 511);
+                  var fcp = require("fs-extra");
+                  fcp.copy(path.join(__dirname+"/"+buildPath),rootFolderPath, function (err) {
+                  if (err){
+                    log.info(":::::erorr occured::::::::::::::: ",err);
+                  }
+                  else{
+                     log.info('"Directpory successfully created:::::::::::::');
+                     fs.chmodSync(rootFolderPath+"/geth", 511);
+                    binPath = rootFolderPath+"/geth";
+                    log.info(`Start node using ${binPath}`);
+                        temp.__startProcess(nodeType, network, binPath,rootFolderPath)
+                            .then(resolve, reject);
+
+                  }
+                  });
+               }
+               else{
+                 log.info("Directory already exist in location:::::::");
+                 binPath = rootFolderPath+"/geth";
+                 log.info(`Start node using ${binPath}`);
+                     temp.__startProcess(nodeType, network, binPath,rootFolderPath)
+                         .then(resolve, reject);
+               }
+
+   })
     }
+
 
 
     /**
      * @return {Promise}
      */
-    __startProcess(nodeType, network, binPath) {
+    __startProcess(nodeType, network, binPath,folderPath) {
         return new Q((resolve, reject) => {
             log.trace('Rotate log file');
 
@@ -377,7 +419,7 @@ class EthereumNode extends EventEmitter {
                 //PROD NETWORK ID
                 // let networkId = '11199';
 
-                let datadir = process.platform === 'darwin' ? path.join(__dirname + "/../../../../DaxxcoinPeer/data") : path.join(__dirname + "/../../../DaxxcoinPeer/data");
+                let datadir = folderPath+"/data";
 
                 // '--fast', '--cache', ((process.arch === 'x64') ? '1024' : '512'),
                 args = (nodeType === 'geth') ? ['--networkid', networkId, '--port', '30332', '--datadir', datadir] : ['--unsafe-transactions'];

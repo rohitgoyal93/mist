@@ -245,13 +245,13 @@ class Settings {
         //console.log("ipc path pre =======", ipcPath);
 
         if (process.platform === 'darwin') {
-            // ipcPath += '/Library/Ethereum/geth.ipc';
-            ipcPath = path.join(__dirname + "/../../../../DaxxcoinPeer/data/geth.ipc");
+             ipcPath += '/DaxxcoinPeer-Staging/data/geth.ipc';          //change this for staging build
+            //  ipcPath += '/DaxxcoinPeer-Production/data/geth.ipc';       //change this for production build
         } else if (process.platform === 'freebsd' ||
        process.platform === 'linux' ||
        process.platform === 'sunos') {
-            // ipcPath += '/.ethereum/geth.ipc';
-            ipcPath = path.join(__dirname + "/../../../DaxxcoinPeer/data/geth.ipc");
+         ipcPath += '/DaxxcoinPeer-Staging/data/geth.ipc';          //change this for staging build
+        //  ipcPath += '/DaxxcoinPeer-Production/data/geth.ipc';       //change this for production build
         } else if (process.platform === 'win32') {
             ipcPath = '\\\\.\\pipe\\geth.ipc';
         }
@@ -311,6 +311,10 @@ class Settings {
 
     constructUserDataPath(filePath) {
         return path.join(this.userDataPath, filePath);
+    }
+
+    userSystemPath() {
+        return this.userHomePath;
     }
 
 }
