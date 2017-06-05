@@ -66,7 +66,7 @@ ${EndIf}
     SetShellVarContext current
     StrCpy $DATADIR "$APPDATA\${APPNAME}"
     #StrCpy $NODEDATADIR "$APPDATA\Ethereum"
-    StrCpy $NODEDATADIR "$PROFILE\DaxxcoinPeer-Staging\data"
+    StrCpy $NODEDATADIR "$PROFILE\DaxxPeer\data"
     #StrCpy $NODEDATADIR "$PROFILE\DaxxcoinPeer-Production\data"
     StrCpy $SHORTCUTDIR "$SMPROGRAMS\${APPNAMENOHYPEN}"
     StrCpy $DESKTOPDIR "$DESKTOP"
