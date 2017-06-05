@@ -146,7 +146,7 @@
             "nodeStopped": "DaxxCoin node gestopt",
             "nodeError": "DaxxCoin node verbindingsfout :'(",
             "unableToBindPort": "DaxxCoin node kan niet opstarten. Draait er al een?",
-            "nodeSyncing": "DaxxCoin node moet synchroniseren, even geduld alstublieft...",
+            "nodeSyncing": "DaxxCoin knooppunt gesynchroniseerd",
             "nodeSyncInfo": "Blok __currentBlock__ van __highestBlock__ aan het downloaden.",
             "nodeSyncInfoStates": "Blok __displayBlock__ van __highestBlock__ aan het downloaden, <br> Chain structuur __displayState__ van __displayKnownStates__ aan het downloaden",
             "nodeSyncConnecting": "Zoeken naar peers...",

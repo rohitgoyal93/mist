@@ -153,7 +153,7 @@
             "nodeStopped": "DaxxCoin node stopped",
             "nodeError": "DaxxCoin node connection error :'(",
             "unableToBindPort": "DaxxCoin node cannot run. Is another instance already running?",
-            "nodeSyncing": "DaxxCoin node needs to sync, please wait...",
+            "nodeSyncing": "DaxxCoin node synchronized",
             "nodeSyncInfo": "Downloading block __displayBlock__ of __highestBlock__",
             "nodeSyncInfoStates": "Downloading block __displayBlock__ of __highestBlock__, <br> Downloading chain structure __displayState__ of __displayKnownStates__",
             "nodeSyncConnecting": "Looking for peers...",

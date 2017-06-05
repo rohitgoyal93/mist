@@ -67,11 +67,11 @@ Template['popupWindows_requestAccount'].events({
                 TemplateVar.set(template, 'creating', false);
 
                 // notifiy about backing up!
-                alert(TAPi18n.__('mist.popupWindows.requestAccount.backupHint'));
+                //alert(TAPi18n.__('mist.popupWindows.requestAccount.backupHint'));
 
                 ipc.send('backendAction_closePopupWindow');
             });
-        
+
         }
 
         TemplateVar.set('password-repeat', false);

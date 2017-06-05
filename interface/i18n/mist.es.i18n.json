@@ -120,7 +120,7 @@
             "startedNode": "Iniciando la aplicación...",
             "nodeConnectionTimeout": "No se pudo iniciar un nodo DaxxCoin!<br><small>Si <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>has instalado Geth</a>, utiliza este comando para ejecutarlo: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/ethereum/mist/issues' class='button' target='_blank'> O informa del problema </a></small>",
             "nodeBinaryNotFound": "No se ha encontrado el binario del nodo DaxxCoin!<br><small> <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'> Por favor, inicie antes uno manualmente. </a> </small>",
-            "nodeSyncing": "El nodo de DaxxCoin necesita sincronizarse, por favor espere...",
+            "nodeSyncing": "Nodo DaxxCoin sincronizado",
             "nodeSyncInfo": "Descargando bloque __displayBlock__ de __highestBlock__.",
             "nodeSyncConnecting": "Buscando pares...",
             "peerSearchTimeout": "Omitir la búsqueda de pares",

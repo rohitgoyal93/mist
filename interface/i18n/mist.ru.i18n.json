@@ -128,7 +128,7 @@
             "nodeStopped": "DaxxCoin-нода остановлена",
             "nodeError": "Ошибка подключения к DaxxCoin-ноде :'(",
             "unableToBindPort": "DaxxCoin-нода не запущена. Может запущен другой экземпляр?",
-            "nodeSyncing": "DaxxCoin-ноде необходимо синхронизироваться, пожалуйста подождите...",
+            "nodeSyncing": "Синхронизированный узел DaxxCoin",
             "nodeSyncInfo": "Загружено блоков __displayBlock__ из __highestBlock__",
             "nodeSyncInfoStates": "Загружено блоков __displayBlock__ из __highestBlock__, <br> Загружено частей структуры блокчейна __displayState__ из __displayKnownStates__",
             "nodeSyncConnecting": "Поиск пиров...",

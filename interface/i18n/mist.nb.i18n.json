@@ -128,7 +128,7 @@
             "nodeStopped": "DaxxCoin-node stoppet",
             "nodeError": "DaxxCoin-node tilkoblingsfeil :'(",
             "unableToBindPort": "DaxxCoin-node kan ikke kjøre. Kjører det en allerede?",
-            "nodeSyncing": "DaxxCoin-node trenger å synkroniseres, vennligst vent...",
+            "nodeSyncing": "DaxxCoin-noden synkronisert",
             "nodeSyncInfo": "Laster ned blokk __currentBlock__ av __highestBlock__.",
             "nodeSyncConnecting": "Leter etter peers...",
             "peerSearchTimeout": "Hopp over peer søk",

@@ -436,7 +436,7 @@ Template['popupWindows_onboardingScreen_password'].events({
                 TemplateVar.set(template, 'creatingPassword', false);
 
                 // notifiy about backing up!
-                alert(TAPi18n.__('mist.popupWindows.requestAccount.backupHint'));
+                //alert(TAPi18n.__('mist.popupWindows.requestAccount.backupHint'));
 
                 if(!e) {
                     TemplateVar.setTo('.onboarding-account', 'newAccount', web3.toChecksumAddress(res));
