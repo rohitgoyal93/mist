@@ -250,8 +250,8 @@ class Settings {
         } else if (process.platform === 'freebsd' ||
        process.platform === 'linux' ||
        process.platform === 'sunos') {
-         ipcPath += '/DaxxcoinPeer-Staging/data/geth.ipc';          //change this for staging build
-        //  ipcPath += '/DaxxPeer-Production/data/geth.ipc';       //change this for production build
+        //  ipcPath += '/DaxxcoinPeer-Staging/data/geth.ipc';          //change this for staging build
+         ipcPath += '/DaxxPeer/data/geth.ipc';       //change this for production build
         } else if (process.platform === 'win32') {
             ipcPath = '\\\\.\\pipe\\geth.ipc';
         }
