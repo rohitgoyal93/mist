@@ -226,8 +226,9 @@ const createAccountPopup = (e) => {
     Windows.createPopup('requestAccount', {
         ownerId: e.sender.id,
         electronOptions: {
-            width: 400,
-            height: 230,
+             width: 460,
+            height: 400,
+            frame: false,
             alwaysOnTop: true,
         },
     });

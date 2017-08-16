@@ -244,8 +244,8 @@ onReady = () => {
             url: `${global.interfacePopupsUrl}#splashScreen_${Settings.uiMode}`,
             show: true,
             electronOptions: {
-                width: 400,
-                height: 230,
+                 width: 600,
+                 height: 380,
                 resizable: false,
                 backgroundColor: '#F6F6F6',
                 useContentSize: true,

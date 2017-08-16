@@ -10,7 +10,10 @@
 
         <img id="image" src="{{appIconPath}}">
         <h1>
-            {{{TemplateVar.get "text"}}}
+            
+            <span style="font-size: 25px;">{{{TemplateVar.get "text"}}}</span>
+
+
             
             {{#if TemplateVar.get "syncStatusMessage"}}
                 <br><small> {{{syncStatus}}} </small>
@@ -21,7 +24,8 @@
             {{/if}}
         </h1>
 
-        {{#if TemplateVar.get "showProgressBar"}}
+         <img id="image1" src="{{timerIconPath}}" style="height: 90px; width:45px; margin-top: -36px; ">
+                 {{#if TemplateVar.get "showProgressBar"}}
             <progress class="{{mode}}" max="100" value="{{TemplateVar.get 'progress'}}"></progress>
             {{#if TemplateVar.get "showStateProgressBar"}}
                 <progress class="state {{mode}}" max="100" value="{{TemplateVar.get 'stateProgress'}}"></progress>

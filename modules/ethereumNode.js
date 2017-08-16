@@ -323,14 +323,14 @@ class EthereumNode extends EventEmitter {
       var temp = this;
       const client = ClientBinaryManager.getClient(nodeType);
       let binPath;
-      //  var rootFolderPath = Settings.userSystemPath()+'/DaxxcoinPeer-Staging';   //staging-build
-        var rootFolderPath = Settings.userSystemPath()+'/DaxxPeer';                //production-build
+       var rootFolderPath = Settings.userSystemPath()+'/DaxxcoinPeer-Staging';   //staging-build
+        // var rootFolderPath = Settings.userSystemPath()+'/DaxxPeer';                //production-build
 
-        // var copyFolderPath ="wallet_staging";
-         var copyFolderPath = "wallet_production";
+        var copyFolderPath ="wallet_staging";
+         // var copyFolderPath = "wallet_production";
 
-        var buildPath = copyFolderPath+"/DaxxcoinPeer-Mac";
-        // var buildPath = copyFolderPath+"/DaxxcoinPeer-Linux";
+        // var buildPath = copyFolderPath+"/DaxxcoinPeer-Mac";
+        var buildPath = copyFolderPath+"/DaxxcoinPeer-Linux";
         // var buildPath = copyFolderPath+"/DaxxcoinPeer-Win64";       //change the get to geth.exe also during permission
         // var buildPath = copyFolderPath+"/DaxxcoinPeer-Win32";       //change the get to geth.exe also during permission
 
@@ -414,10 +414,10 @@ class EthereumNode extends EventEmitter {
                 // args = (nodeType === 'geth') ? ['--networkid', '1501', '--port', '30302', '--datadir', path.join(__dirname + "/../../../../localPeer")] : ['--unsafe-transactions'];
 
                 //STAGING NETWORK ID
-                // let networkId = '11198';
+                let networkId = '11198';
 
                 //PROD NETWORK ID
-                 let networkId = '11199';
+                 // let networkId = '11199';
 
                 let datadir = folderPath+"/data";
 

@@ -1,8 +1,18 @@
 <template name="popupWindows_requestAccount">
     <div class="popup-windows request-account">
-        <form action="#">
+        <form action="#" >
+            <div class="dapp-modal-buttons" >
+                 <button class="cancel" type="button">
+                     <img src="https://cdn.shopify.com/s/files/1/1367/9895/t/4/assets/close-button.png?18418023039726375411" height="20px" width="20px"  style="margin-top: -15px;">
+                     </button>   
+                </div> 
+
+             <!--<button class="cancel" style="float: right" type="button"></button>-->
             <!-- <h1>{{i18n "mist.popupWindows.requestAccount.title"}}</h1> -->
-            <h1>{{i18n "mist.popupWindows.sendTransactionConfirmation.CreateWallet"}}</h1>
+   
+            <h1 style="color:#05375f; font-weight: normal">{{i18n "mist.popupWindows.sendTransactionConfirmation.CreateWallet"}}</h1>
+            
+            <h3 style="text-align: center">{{i18n 'mist.popupWindows.requestAccount.enterPassword'}}</h3>
 
             {{#if TemplateVar.get "creating"}}
                 <h2>{{i18n "mist.popupWindows.requestAccount.creating"}}</h2>
@@ -10,16 +20,17 @@
                 <div class="field-container {{#if TemplateVar.get 'password-repeat'}}repeat-field{{/if}}">
 
                     <input type="{{passwordInputType}}" placeholder="{{i18n 'mist.popupWindows.requestAccount.enterPassword'}}" class="password">
+                    
                     <input type="{{passwordInputType}}" placeholder="{{i18n 'mist.popupWindows.requestAccount.repeatPassword'}}" class='password-repeat'>
                 </div>
                 <div class="show-password-container">
                     <input type="checkbox" name="elements_input_bool" class="show-password abi-input">
                     <label for="show-password">{{i18n "mist.popupWindows.onboarding.buttons.showPassword"}}</label>
                 </div>
-                <div class="dapp-modal-buttons">
-                    <button class="cancel" type="button">{{i18n "buttons.cancel"}}</button>
-                    <button class="ok dapp-primary-button" type="submit">{{i18n "buttons.ok"}}</button>
-                </div>
+                <div class="dapp-modal-buttons"  >
+                 <!--<button class="cancel" type="button">{{i18n "buttons.cancel"}}</button>   -->
+                    <button class="ok dapp-primary-button" style="float:right; background-color:#05375f;  color: white; font-size: 19px; width: 395px; " type="submit">{{i18n "buttons.continue"}}</button>
+                </div> 
             {{/if}}
         </form>
     </div>

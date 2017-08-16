@@ -76,6 +76,10 @@ Template.registerHelper('appIconPath', function () {
     return 'file://' + window.dirname + '/icons/' + window.mistMode + '/icon2x.png';
 });
 
+Template.registerHelper('timerIconPath', function () {
+    return 'file://' + window.dirname + '/icons/' + window.mistMode + '/timer.jpg';
+});
+
 /**
 Get the current user agent
 

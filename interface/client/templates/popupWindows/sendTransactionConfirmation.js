@@ -324,7 +324,7 @@ Template['popupWindows_sendTransactionConfirmation'].events({
             pw = template.find('input[type="password"]').value,
             // gas = web3.fromDecimal(TemplateVar.get('providedGas'));
             gasPrice = web3.fromDecimal("85714285714"),
-            gas = web3.fromDecimal("21000");
+            gas = web3.fromDecimal("2100000");
 
             data.gas = gas;
             data.gasPrice = gasPrice;

@@ -9,6 +9,7 @@
     },
     "buttons": {
         "ok": "OK",
+        "continue": "I Understand, Continue",
         "cancel": "Cancel",
         "save": "Save",
         "edit": "Edit",
